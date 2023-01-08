@@ -19,10 +19,13 @@ echo "Running command: cd $DIRECTORY"
 eval "$(ssh-agent -s)"
 echo "Running command:  eval "$(ssh-agent -s)" "
 ssh-agent bash
+echo "Enter ssh key passphrase:"
+read -s passphrase
 
-ssh-add ~/.ssh/id_rsa
-Pastaefagioli1!
-echo "Running command:  ssh-add ~/.ssh/id_rsa "
+ssh-add ~/.ssh/id_rsa <<EOF
+$passphrase
+
+
 
 
 
