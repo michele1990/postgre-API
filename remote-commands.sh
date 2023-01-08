@@ -1,12 +1,12 @@
 #!/bin/bash
 cd /var/lib/postgresql/postgre-API
 echo "Running command: cd /var/lib/postgresql/postgre-API"
-eval "SSH_AUTH_SOCK=/var/folders/7g/dy4nnfgn2694wvjkdm2473_r0000gn/T//ssh-ggvmtOqrJMF6/agent.15649; export SSH_AUTH_SOCK;
-SSH_AGENT_PID=15650; export SSH_AGENT_PID;
-echo Agent pid 15650;"
-echo "Running command:  eval "SSH_AUTH_SOCK=/var/folders/7g/dy4nnfgn2694wvjkdm2473_r0000gn/T//ssh-IZ1cEjCibKbd/agent.15651; export SSH_AUTH_SOCK;
-SSH_AGENT_PID=15652; export SSH_AGENT_PID;
-echo Agent pid 15652;" "
+eval "SSH_AUTH_SOCK=/var/folders/7g/dy4nnfgn2694wvjkdm2473_r0000gn/T//ssh-ChXYKUSrFDQE/agent.15813; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=15814; export SSH_AGENT_PID;
+echo Agent pid 15814;"
+echo "Running command:  eval "SSH_AUTH_SOCK=/var/folders/7g/dy4nnfgn2694wvjkdm2473_r0000gn/T//ssh-lXuibIMMgXMy/agent.15815; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=15816; export SSH_AGENT_PID;
+echo Agent pid 15816;" "
 ssh-agent bash
 
 ssh-add ~/.ssh/id_rsa
