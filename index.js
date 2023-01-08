@@ -22,8 +22,4 @@ app.get('/books/:author', db.getUserById)
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
-})
-
-
-~                                                                  
-~                  
+})              
