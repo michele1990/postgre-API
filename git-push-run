@@ -14,24 +14,20 @@ ssh-add ~/.ssh/id_rsa
 
 cat <<EOF > remote-commands.sh
 #!/bin/bash
-
-echo "Enter ssh key passphrase:"
-
+cd $DIRECTORY
 echo "Running command: cd $DIRECTORY"
 eval "$(ssh-agent -s)"
 echo "Running command:  eval "$(ssh-agent -s)" "
-ssh-agent
-echo "Running command: eval SSH_AUTH_SOCK=\$SSH_AUTH_SOCK SSH_AGENT_PID=\$SSH_AGENT_PID"
-eval `ssh-agent`
+ssh-agent bash
 
-ssh-add ~/.ssh/id_rsa 
+ssh-add ~/.ssh/id_rsa
 Pastaefagioli1!
-
-echo "Running command: ssh-add ~/.ssh/id_rsa "
-
-echo "Running command: ssh-add ~/.ssh/id_rsa "
+echo "Running command:  ssh-add ~/.ssh/id_rsa "
 
 
+
+
+git --work-tree=/var/lib/postgresql/postgre-API --git-dir=/var/lib/postgresql/postgre-API/.git pull
 
 
 
