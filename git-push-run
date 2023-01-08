@@ -7,6 +7,8 @@ DIRECTORY=/var/lib/postgresql/postgre-API
 echo 'cd /var/lib/postgresql/postgre-API'
 echo 'git --work-tree=/var/lib/postgresql/postgre-API --git-dir=/var/lib/postgresql/postgre-API/.git pull origin main'
 
+git push
+
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
