@@ -1,0 +1,47 @@
+#!/bin/bash
+
+IP_ADDRESS=95.179.228.59
+USERNAME=postgres
+DIRECTORY=/var/lib/postgresql/postgre-API
+
+echo 'cd /var/lib/postgresql/postgre-API'
+echo 'git --work-tree=/var/lib/postgresql/postgre-API --git-dir=/var/lib/postgresql/postgre-API/.git pull origin main'
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+cat <<EOF > remote-commands.sh
+#!/bin/bash
+cd $DIRECTORY
+echo "Running command: cd $DIRECTORY"
+eval "$(ssh-agent -s)"
+echo "Running command:  eval "$(ssh-agent -s)" "
+ssh-agent bash
+
+ssh-add ~/.ssh/id_rsa
+Pastaefagioli1!
+echo "Running command:  ssh-add ~/.ssh/id_rsa "
+
+
+
+
+git --work-tree=/var/lib/postgresql/postgre-API --git-dir=/var/lib/postgresql/postgre-API/.git pull
+      
+echo "Running command: git --work-tree=/var/lib/postgresql/postgre-API --git-dir=/var/lib/postgresql/postgre-API/.git pull origin main
+      "
+EOF
+
+chmod +x remote-commands.sh
+
+echo "Logging in to $USERNAME@$IP_ADDRESS and running commands..."
+
+ssh $USERNAME@$IP_ADDRESS 'bash -s' < remote-commands.sh
+
+
+
+
+
+
+
+
+
