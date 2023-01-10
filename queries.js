@@ -45,7 +45,7 @@ const post = (request, response) => {
     [title, author, genre, sub_genre, height, publisher],
     (error, results) => {
       if (error) {
-        throw error;
+        throw error
       }
       response.status(201).send(`Book added with ID: ${results.insertId}`);
     }
