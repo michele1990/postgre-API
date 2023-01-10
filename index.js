@@ -2,7 +2,7 @@ const express = require('express')
 const db = require('./queries')
 const bodyParser = require('body-parser')
 const app = express()
-const port = 3000
+const port = 3001
 
 
 
@@ -23,7 +23,7 @@ app.get('/books/:author', db.getUserById)
 
 app.post('/bookpost',db. post);
 app.listen(3000, () => {
-  console.log('Server running on port 3000')
+  console.log('Server running on port 3001')
 });
 
 app.listen(port, () => {
