@@ -20,9 +20,9 @@ app.get('/', (request, response) => {
 
 app.get('/books', db.getUsers)
 app.get('/books/:author', db.getUserById)
-
 app.post('/bookpost',db. post);
-app.listen(3000, () => {
+
+app.listen(port, () => {
   console.log('Server running on port 3001')
 });
 
