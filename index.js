@@ -21,6 +21,11 @@ app.get('/', (request, response) => {
 app.get('/books', db.getUsers)
 app.get('/books/:author', db.getUserById)
 
+app.post('/bookpost', post);
+app.listen(3000, () => {
+  console.log('Server running on port 3000')
+});
+
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
 })              

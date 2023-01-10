@@ -37,7 +37,20 @@ const getUserById = (request, response) => {
 
 
 
+const post = (request, response) => {
+  const { title, author, genre, sub_genre, height, publisher } = request.body;
 
+  pool.query(
+    'INSERT INTO book (title, author, genre, sub_genre, height, publisher) VALUES ($1, $2, $3, $4, $5, $6)',
+    [title, author, genre, sub_genre, height, publisher],
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(201).send(`Book added with ID: ${results.insertId}`);
+    }
+  );
+};
 
 
 
@@ -45,5 +58,6 @@ const getUserById = (request, response) => {
 module.exports = {
   getUsers,
   getUserById,
+  post,
 }
 
