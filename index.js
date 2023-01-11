@@ -20,7 +20,7 @@ app.get('/', (request, response) => {
 
 app.get('/books', db.getUsers)
 app.get('/books/:author', db.getUserById)
-app.post('/bookpost',db. post);
+app.post('/bookpost',db.post);
 
 
 
