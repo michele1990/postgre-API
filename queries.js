@@ -41,7 +41,7 @@ const post = (request, response) => {
   const { title, author, genre, sub_genre, height, publisher } = request.body;
 
   pool.query(
-    'INSERT INTO book (title, author, genre, sub_genre, height, publisher) VALUES ($1, $2, $3, $4, $5, $6)',
+    'INSERT INTO book (title, author, genre, subgenre, height, publisher) VALUES ($1, $2, $3, $4, $5, $6)',
     [title, author, genre, sub_genre, height, publisher],
     (error, results) => {
       if (error) {
